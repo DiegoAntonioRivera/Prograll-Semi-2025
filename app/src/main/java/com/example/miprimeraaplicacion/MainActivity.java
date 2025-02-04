@@ -3,8 +3,6 @@ package com.example.miprimeraaplicacion;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -19,8 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     TextView tempVal;
-    RadioGroup rgb;
-    RadioButton opt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,35 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 double Num2 = Double.parseDouble(tempVal.getText().toString());
 
                 double respuesta = Num1 + Num2;
-
-                opt = findViewById(R.id.optSuma);
-                if (opt.isChecked()) {
-                    respuesta = Num1 + Num2;
-                }
-                opt = findViewById(R.id.optResta);
-                if (opt.isChecked()) {
-                    respuesta = Num1 - Num2;
-                }
-                opt = findViewById(R.id.optMultiplicacion);
-                if (opt.isChecked()) {
-                    respuesta = Num1 * Num2;
-                }
-                opt = findViewById(R.id.optDivision);
-                if (opt.isChecked()) {
-                    respuesta = Num1 / Num2;
-                }
-                opt = findViewById(R.id.optExponenciacion);
-                if (opt.isChecked()) {
-                    respuesta = Math.pow(Num1, Num2);
-                }
-                opt = findViewById(R.id.optPorcentual);
-                if (opt.isChecked()) {
-                    respuesta = (Num1 * Num2) / 100;
-                }
-                opt = findViewById(R.id.optRaiz);
-                if (opt.isChecked()) {
-                        respuesta = Math.pow(Num1, 1.0 / Num2);
-                }
 
                 tempVal = findViewById(R.id.lblRespuesta);
                 tempVal.setText("Respuesta: "+ respuesta);
